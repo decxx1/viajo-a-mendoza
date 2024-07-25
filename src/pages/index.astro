@@ -1,0 +1,29 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Header from '@/components/Header.jsx';
+import Hero from '@/components/Hero.astro';
+import Features from '@/components/Features.astro';
+import MostViewed from '@/components/MostViewed.astro';
+import CTA from '@/components/CTA.astro';
+import Places from '@/components/Places.astro';
+import CTAWsp from '@/components/CTAWsp.astro';
+---
+<Layout 
+	title="Viajo a Mendoza"
+	canonical="https://viajoamendoza.com.ar"
+	metaTitle=""
+	metaDescription=""
+	metaImg=""
+	preLoad=""
+>
+	<Header
+		client:load
+		heroPage={true}
+	/>
+	<Hero />
+	<Features />
+	<MostViewed />
+	<CTA />
+	<Places />
+	<CTAWsp />
+</Layout>

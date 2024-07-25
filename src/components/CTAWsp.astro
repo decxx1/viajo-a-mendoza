@@ -1,0 +1,17 @@
+---
+import { 
+    whatsappLinkeable,
+ } from '@/hooks/env.js';
+
+import WhatsApp from '@/icones/WhatsApp.astro';
+---
+<section class="relative z-0 overflow-hidden h-72">
+    <img class="w-full h-full absolute -z-10 object-cover object-center" loading="lazy" src="/images/bg-mountain.png" alt="alta montaña en mendoza" />
+    <div class="relative top-1/2 -translate-y-1/2 text-center max-w-screen-sm mx-auto">
+        <h4 class="text-center font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl mx-auto pb-2 max-sm:mt-5 dark:text-white">Contactános para asegurar tu experiencia inolvidable</h4>
+        <hr class="border-2 border-primary-700 max-w-20 ml-10"/>
+        <p class="text-lg font-medium text-black dark:text-gray-500 mt-4 mb-8">Consultá nuestras ofertas especiales para grupos familiares</p>
+        <a class="px-8 py-3 bg-[#26ca43] text-white text-lg font-bold rounded-md hover:bg-[#26ca4390] dark:bg-gray-400 dark:hover:bg-gray-500" href={'https://wa.me/54' + whatsappLinkeable} target="_blank"><WhatsApp extraClass="mr-2 inline h-8 w-8" />WhatsApp</a>
+    </div>
+</section>
+

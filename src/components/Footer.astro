@@ -1,0 +1,70 @@
+---
+import LogoSlogan from '@/icones/LogoSlogan.astro';
+import Facebook from '@/icones/Facebook.astro';
+import Instagram from '@/icones/Instagram.astro';
+import Chevron from '@/icones/Chevron.astro';
+import Phone from '@/icones/Phone.astro';
+import Email from '@/icones/Email.astro';
+import Clock from '@/icones/Clock.astro';
+import {
+    telphoneLinkeable,
+    telphoneReadble,
+    whatsappReadble,
+    whatsappLinkeable,
+    schedules,
+    email,
+    facebook,
+    instagram,
+ } from '@/hooks/env.js';
+
+import WhatsApp from '@/icones/WhatsApp.astro';
+---
+<footer class="bg-primary-800 dark:bg-gray-800 flex flex-col justify-center">
+    <section class="grid grid-cols-12">
+        <div class="col-span-12 min-[1208px]:col-span-3 max-[1208px]:order-1">
+            <div class="bg-white dark:bg-gray-700 py-10 px-16 w-max mx-auto border-t-4 border-primary-700 lg:border-t-8 sm:relative sm:-top-6 min-[1208px]:-top-12 mb-4 sm:-mb-4 min-[1208px]:-mb-8">
+                <a href="/">
+                    <LogoSlogan extraClass="text-semiDark dark:text-white w-40" />
+                </a>
+            </div>
+            <div class="flex mb-4 justify-center">
+                { facebook && 
+                    <a href={facebook} target="_blank" rel="nofollow noopener noreferrer">
+                        <Facebook extraClass='w-10 h-10 mr-4 text-white hover:text-semiBlack dark:hover:text-primary-700'/>
+                    </a>
+                }
+                { instagram && 
+                    <a href={instagram} target="_blank" rel="nofollow noopener noreferrer">
+                        <Instagram extraClass='w-10 h-10 text-white hover:text-semiBlack dark:hover:text-primary-700'/>
+                    </a>
+                }
+            </div>
+        </div>
+        <div class="px-4 pt-8 pb-4 col-span-12 md:col-span-3 md:max-[1208px]:mx-auto min-[1208px]:col-span-2 max-[1208px]:order-4">
+            <h5 class="text-white text-shadow-md text-2xl font-semibold mb-4">Enlaces</h5>
+            <ul class="text-white text-lg">
+                <li><a class="hover:text-semiBlack dark:hover:text-primary-700" href="/"><Chevron extraClass='inline mr-2' />Inicio</a></li>
+                <li><a class="hover:text-semiBlack dark:hover:text-primary-700" href="/packages"><Chevron extraClass='inline mr-2' />Paquetes</a></li>
+                <li><a class="hover:text-semiBlack dark:hover:text-primary-700" href="/contact"><Chevron extraClass='inline mr-2' />Contacto</a></li>
+            </ul>
+        </div>
+        <div class="px-4 pt-8 pb-4 col-span-12 md:col-span-4 md:max-[1208px]:mx-auto min-[1208px]:col-span-3 max-[1208px]:order-3">
+            <h5 class="text-white text-shadow-md text-2xl font-semibold mb-4">Horarios de atención</h5>
+            <p class="text-white text-lg text-shadow"><Clock extraClass="mr-2 inline h-5 w-5" />{schedules}</p>
+        </div>
+        <div class="px-4 pt-8 pb-4 col-span-12 md:col-span-5 md:max-[1208px]:mx-auto min-[1208px]:col-span-4 max-[1208px]:order-2">
+            <h5 class="text-white text-shadow-md text-2xl font-semibold mb-4">Información</h5>
+            <ul class="text-white">
+                <li><a class="text-lg hover:text-semiBlack dark:hover:text-primary-700" href={`tel:${telphoneLinkeable}`}><Phone extraClass="mr-2 inline h-5 w-5" />{telphoneReadble}</a></li>
+                <li><a class="text-lg hover:text-semiBlack dark:hover:text-primary-700" href={`https://wa.me/54${whatsappLinkeable}`}><WhatsApp extraClass="mr-2 inline h-5 w-5" />{whatsappReadble}</a></li>
+                <li><a class="text-md hover:text-semiBlack dark:hover:text-primary-700" href={`mailto:${email}`}><Email extraClass="mr-2 inline h-5 w-5" />{email}</a></li>
+            </ul>
+        </div>
+    </section>
+    <div class="bg-white py-4 px-4 mt-6 max-sm:mb-20 mb-6 dark:bg-gray-700">
+        <p class="text-center font-medium border-b-title sm:w-max mx-auto pb-1 dark:text-white ">
+            Diseñado por 
+            <a href="https://manejoweb.com.ar" target="_blank" class="hover:font-semibold hover:text-primary-800"><b>Manejo Web</b></a>
+        </p>
+    </div>
+</footer>

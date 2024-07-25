@@ -1,0 +1,37 @@
+---
+import Package from '@/components/Package.astro';
+import ButtonStyled from '@/components/ButtonStyled.astro';
+---
+
+<div class="bg-gradient-to-b h-44 from-[#e0e3e4] to-semiWhite dark:from-[#121a29] dark:to-gray-900">
+</div>
+    <section class="pt-20 -mb-28 container mx-auto relative -top-44">
+        <h2 class="text-center font-bold text-4xl border-b-title pb-2 sm:w-max mx-auto mb-6 dark:text-white">Paquetes más pedidos</h2>
+        <section class="pb-10 pt-20">
+            <div class="grid grid-cols-1 max-sm:space-y-6 sm:grid-cols-2 sm:gap-4 lg:gap-10 items-center justify-items-center lg:max-w-screen-md mx-auto ">
+                <Package
+                    src="/images/lugares-turisticos/bodegas.png"
+                    horario="Lunes a Sábados"
+                    title="Bodegas"
+                    text="2 bodegas 1 olivicola (incluye ingreso y degustación)"
+                    salida="14hs"
+                    regreso="19hs"
+                />
+                <Package
+                    src="/images/lugares-turisticos/alta-mountain.jpg"
+                    horario="Lunes a Domingos"
+                    title="Alta montaña"
+                    text="Recorrido guiado por toda la alta montaña mendocina."
+                    salida="7:30hs"
+                    regreso="19hs"
+                />
+            </div>
+            <div class="mt-12 flex justify-center">
+                <ButtonStyled
+                    href="/packages"
+                >
+                    Ver todos <svg class="inline text-primary-700 group-hover:text-semiBlack" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m21 12l-5-5m5 5l-5 5m5-5H3"/></svg>
+                </ButtonStyled>
+            </div>
+        </section>
+    </section>

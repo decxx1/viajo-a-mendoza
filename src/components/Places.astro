@@ -1,0 +1,13 @@
+---
+import Place from '@/components/Place.astro';
+import Slides from '@/components/Slides.jsx';
+---
+
+<section class="relative z-0 overflow-hidden h-[770px]">
+    <img class="w-full h-full absolute -z-10 object-cover object-center pt-32 dark:hidden" loading="lazy" src="/images/bg_city.svg" alt="tours de mendoza" />
+    <img class="w-full h-full absolute -z-10 object-cover object-center pt-32 hidden dark:block" loading="lazy" src="/images/bg_city_dark.svg" alt="tours de mendoza noche" />
+    <div class="py-20 relative top-0 text-center">
+        <h2 class="text-center font-bold text-4xl border-b-title sm:w-max mx-auto pb-2 dark:text-white">Lugares turísticos en Mendoza</h2>
+    </div>
+    <Slides client:idle />    
+</section>

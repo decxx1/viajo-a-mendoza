@@ -1,0 +1,192 @@
+---
+import Place from '@/components/Place.astro';
+---
+<script>
+import { Carousel } from 'flowbite';
+
+const carouselElement = document.getElementById('carousel-places');
+
+const items = [
+    {
+        position: 0,
+        el: document.getElementById('carousel-item-1'),
+    },
+    {
+        position: 1,
+        el: document.getElementById('carousel-item-2'),
+    },
+
+];
+
+// options with default values
+const options = {
+    defaultPosition: 0,
+    interval: 6000,
+
+    indicators: {
+        activeClasses: 'bg-primary-800 dark:bg-gray-400',
+        inactiveClasses:
+            'bg-primary-700/50 dark:bg-gray-600/50 hover:bg-primary-800 dark:hover:bg-gray-400',
+        items: [
+            {
+                position: 0,
+                el: document.getElementById('carousel-indicator-1'),
+            },
+            {
+                position: 1,
+                el: document.getElementById('carousel-indicator-2'),
+            },
+         
+
+        ],
+    },
+
+};
+
+// instance options object
+const instanceOptions = {
+  id: 'carousel-places',
+  override: true
+};
+
+const carousel = new Carousel(carouselElement, items, options, instanceOptions);
+carousel.cycle();
+
+// set event listeners for prev and next buttons
+const $prevButton = document.getElementById('data-carousel-prev');
+const $nextButton = document.getElementById('data-carousel-next');
+
+$prevButton.addEventListener('click', () => {
+    carousel.prev();
+});
+
+$nextButton.addEventListener('click', () => {
+    carousel.next();
+});
+</script>
+<section class="relative z-0 overflow-hidden h-[770px]">
+    <img class="w-full h-full absolute -z-10 object-cover object-center pt-32 dark:hidden" loading="lazy" src="/images/bg_city.svg" alt="tours de mendoza" />
+    <img class="w-full h-full absolute -z-10 object-cover object-center pt-32 hidden dark:block" loading="lazy" src="/images/bg_city_dark.svg" alt="tours de mendoza noche" />
+    <div class="py-20 relative top-0 text-center">
+        <h2 class="text-center font-bold text-4xl border-b-title sm:w-max mx-auto pb-2 dark:text-white">Lugares turísticos en Mendoza</h2>
+    </div>
+    <div id="carousel-places" class="pt-6 relative text-center">
+        <div class="relative h-56 rounded-lg sm:h-64 lg:h-80 xl:h-96">
+            <div id="carousel-item-1" class="hidden duration-700 ease-in-out" data-carousel-item>
+                <div class="grid grid-cols-4 gap-8 justify-items-end lg:max-w-screen-xl ml-auto lg:px-8">
+                    <Place
+                        name="Villavicencio"
+                        image="/images/lugares-turisticos/hotel-y-reserva-villavicencio.webp"
+                    />
+                    <Place
+                        name="Cacheuta"
+                        image="/images/lugares-turisticos/cacheuta.jpg"
+                    />
+                    <Place
+                        name="Potrerillos"
+                        image="/images/lugares-turisticos/potrerillos.avif"
+                    />
+                    <Place
+                        name="Los Penitentes"
+                        image="/images/lugares-turisticos/los-penitentes.jpg"
+                    />
+                </div>
+            </div>
+            <div id="carousel-item-2" class="hidden duration-700 ease-in-out" data-carousel-item>
+                <div class="grid grid-cols-4 gap-8 justify-items-end lg:max-w-screen-xl ml-auto lg:px-8">
+                    <Place
+                        name="Uspallata"
+                        image="/images/lugares-turisticos/uspallata.webp"
+                    />
+                    <Place
+                        name="Cerro Aconcagua"
+                        image="/images/lugares-turisticos/cerro-aconcagua.jpg"
+                    />
+                    <Place
+                        name="Cañon del atuel"
+                        image="/images/lugares-turisticos/canon-atuel.jpg"
+                    />
+                    <Place
+                        name="Valle de Uco"
+                        image="/images/lugares-turisticos/valle-de-uco-mendoza.jpg"
+                    />
+                </div>
+            </div>
+        
+
+        </div>
+        <!-- Slider indicators -->
+        <div
+            class="absolute bottom-6 left-1/2 z-30 flex -translate-x-1/2 space-x-3 rtl:space-x-reverse"
+        >
+            <button
+                id="carousel-indicator-1"
+                type="button"
+                class="h-3 w-3 rounded-full"
+                aria-current="true"
+                aria-label="Slide 1"
+            ></button>
+            <button
+                id="carousel-indicator-2"
+                type="button"
+                class="h-3 w-3 rounded-full"
+                aria-current="false"
+                aria-label="Slide 2"
+            ></button>
+ 
+        </div>
+        <!-- Slider controls -->
+        <button
+            id="data-carousel-prev"
+            type="button"
+            class="group absolute left-0 top-0 z-30 flex h-full cursor-pointer items-center justify-center px-4 focus:outline-none"
+        >
+            <span
+                class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-primary-700/30 group-hover:bg-primary-700/50 group-focus:outline-none group-focus:ring-4 group-focus:ring-primary-200 dark:bg-gray-400/30 dark:group-hover:bg-gray-400/60 dark:group-focus:ring-gray-400/70"
+            >
+                <svg
+                    class="h-4 w-4 text-primary-700 dark:text-gray-200"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 6 10"
+                >
+                    <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 1 1 5l4 4"
+                    />
+                </svg>
+                <span class="hidden">Previous</span>
+            </span>
+        </button>
+        <button
+            id="data-carousel-next"
+            type="button"
+            class="group absolute right-0 top-0 z-30 flex h-full cursor-pointer items-center justify-center px-4 focus:outline-none"
+        >
+            <span
+                class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-primary-700/30 group-hover:bg-primary-700/50 group-focus:outline-none group-focus:ring-4 group-focus:ring-primary-200 dark:bg-gray-400/30 dark:group-hover:bg-gray-400/60 dark:group-focus:ring-gray-400/70"
+            >
+                <svg
+                    class="h-4 w-4 text-primary-700 dark:text-gray-200"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 6 10"
+                >
+                    <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="m1 9 4-4-4-4"
+                    />
+                </svg>
+                <span class="hidden">Next</span>
+            </span>
+        </button>
+    </div>
+</section>

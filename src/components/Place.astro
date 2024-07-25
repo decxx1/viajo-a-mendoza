@@ -1,0 +1,50 @@
+---
+interface Props {
+    name: string;
+    image: string;
+}
+
+const { name, image } = Astro.props;
+---
+
+<figure class="relative w-72 h-80 transition-all duration-300 cursor-pointer">
+    <a href="/packages">
+        <img loading="lazy" class="rounded-md object-cover w-full h-full" src={image} alt={name} />
+    </a>
+    <figcaption class={"text-base leading-tight absolute mx-4 font-bold text-white -top-3"}>
+        <p class="px-4 py-2 bg-primary-700 text-white font-bold dark:bg-gray-700">{name}</p>
+    </figcaption>
+</figure>
+
+<style>
+    figure figcaption p::before {
+        width: 0;
+        right: -8px;
+        height: 0;
+        border-style: solid;
+        border-width: 12px 0 0 8px;
+        border-color: transparent transparent transparent #ad7b30;
+    }
+    
+    figure figcaption p::after, figure figcaption p::before {
+        position: absolute;
+        top: 0;
+        content: '';
+    }
+    figure figcaption p::after {
+        left: -8px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 0 12px 8px;
+        border-color: transparent transparent #ad7b30ed transparent;
+    }
+    html.dark figure figcaption p::before {
+        border-color: transparent transparent transparent #1f2937 !important;
+    }
+    
+    html.dark figure figcaption p::after {
+        border-color: transparent transparent #1f2937 transparent !important;
+    }
+
+</style>
