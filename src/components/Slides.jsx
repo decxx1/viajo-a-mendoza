@@ -67,7 +67,7 @@ export default () => {
         >
           <Place
             name="Cacheuta"
-            image="/images/lugares-turisticos/cacheuta.jpg"
+            image="/images/lugares-turisticos/cacheuta.webp"
           />
         </swiper-slide>
         <swiper-slide
@@ -75,7 +75,7 @@ export default () => {
         >
           <Place
             name="Potrerillos"
-            image="/images/lugares-turisticos/potrerillos.avif"
+            image="/images/lugares-turisticos/potrerillos.webp"
           />
         </swiper-slide>
         <swiper-slide
@@ -83,7 +83,7 @@ export default () => {
         >
           <Place
             name="Los Penitentes"
-            image="/images/lugares-turisticos/los-penitentes.jpg"
+            image="/images/lugares-turisticos/los-penitentes.webp"
           />
         </swiper-slide>
         <swiper-slide
@@ -99,7 +99,7 @@ export default () => {
         >
           <Place
             name="Cerro Aconcagua"
-            image="/images/lugares-turisticos/cerro-aconcagua.jpg"
+            image="/images/lugares-turisticos/cerro-aconcagua.webp"
           />
         </swiper-slide>
         <swiper-slide
@@ -107,7 +107,7 @@ export default () => {
         >
           <Place
             name="Cañon del atuel"
-            image="/images/lugares-turisticos/canon-atuel.jpg"
+            image="/images/lugares-turisticos/canon-atuel.webp"
           />
         </swiper-slide>
         <swiper-slide
@@ -115,7 +115,7 @@ export default () => {
         >
           <Place
             name="Valle de Uco"
-            image="/images/lugares-turisticos/valle-de-uco-mendoza.jpg"
+            image="/images/lugares-turisticos/valle-de-uco-mendoza.webp"
           />
         </swiper-slide>
       </swiper-container>
