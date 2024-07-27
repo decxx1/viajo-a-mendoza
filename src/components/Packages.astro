@@ -1,0 +1,129 @@
+---
+import PackageFull from '@/components/PackageFull.astro'
+import Chevron from '@/icones/Chevron.astro';
+---
+
+<section>
+    <PackageFull
+        title="Tour de Bodegas y Olivícola en Mendoza"
+        subTitle="Lunes a Sábados, de 14:00 a 19:00 hs"
+        images={["/images/lugares-turisticos/bodegas.webp"]}
+    >
+        <section slot="content">
+            <p class="text-md text-left font-normal text-semiBlack dark:text-white mt-3">
+                Disfruta de una experiencia única visitando 2 bodegas boutique, donde recorrerás sus instalaciones y degustarás sus vinos, guiado por expertos en enología. Luego, conocerás una fábrica de aceite de oliva, donde descubrirás el proceso de producción y podrás probar aceites de alta calidad.
+            </p>
+        </section>
+        <section slot="aside">
+            <ul class="text-base">
+                <li><strong>Duración:</strong> 5 horas</li>
+            </ul>
+            <h4 class="font-semibold text-lg">Incluye:</h4>
+            <ul class="text-base">
+                <li><Chevron extraClass='inline mr-2' />Visitas guiadas y degustaciones en cada lugar.</li>
+                <li><Chevron extraClass='inline mr-2' />Transporte desde el centro de Mendoza.</li>
+                <li><Chevron extraClass='inline mr-2' />Guía profesional.</li>
+                <li><Chevron extraClass='inline mr-2' />Seguro de viaje.</li>
+            </ul>
+        </section>
+    </PackageFull>
+    <PackageFull
+        title="Tour de Alta Montaña"
+        subTitle="Lunes a Domingo, de 7:30 a 20:00 hs aprox"
+        images={["/images/lugares-turisticos/bodegas.webp"]}
+    >
+        <section slot="content">
+            
+            <p class="text-md text-left font-normal text-semiBlack dark:text-white mt-3">
+                Disfrutá de la imponente y majestuosa Cordillera de los Andes. En el camino, descubrirás lugares maravillosos como:
+            </p>
+            <ul class="text-base my-4">
+                <li class="mb-2"><strong>Potrerillos:</strong> Localidad situada sobre la Cordillera de los Andes, donde podrás admirar el paisaje del embalse de Potrerillos, que abarca unas 1500 hectáreas de superficie con 7 km de largo y casi 1,5 km de ancho máximo.</li>
+                <li class="mb-2"><strong>Valle de Uspallata:</strong> Esta zona divide la precordillera de la alta montaña y está enclavada en el imponente Cordón del Plata, ubicada entre los 1900 y 2500 metros sobre el nivel del mar.</li>
+                <li class="mb-2"><strong>Penitentes:</strong> Localidad y centro de esquí con mayor infraestructura de Mendoza, situado a solo 4 km del Cerro Aconcagua, el pico más alto del continente americano (6960 msnm).</li>
+                <li class="mb-2"><strong>Puente del Inca:</strong> Área natural protegida declarada Patrimonio de la Humanidad por la UNESCO. Su formación rocosa crea un puente natural sobre el Río Las Cuevas, ofreciendo un valor geológico, paisajístico e histórico notable.</li>
+                <li class="mb-2"><strong>Mirador Cerro Aconcagua:</strong> Observatorio del cerro más alto de América, con sus 6960 metros sobre el nivel del mar.</li>
+                <li class="mb-2"><strong>Las Cuevas:</strong> La localidad más elevada de Mendoza con 3557 msnm, una zona fronteriza que limita con Chile y permite acceder al monumento Cristo Redentor en temporada de verano.</li>
+            </ul>
+        </section>
+        <section slot="aside">
+            <ul class="text-base">
+                <li><strong>Duración:</strong> 12 horas, con varias paradas técnicas para recreación, descanso y fotos.</li>
+                <li><strong>Apto para:</strong> Familias, menores y adultos. No requiere actividad física.</li>
+                <li><strong>Punto de Encuentro:</strong> Deberán acercarse al hotel más cercano para su encuentro.</li>
+            </ul>
+            <h4 class="font-semibold text-lg my-4">Incluye:</h4>
+            <ul class="text-base">
+                <li><Chevron extraClass='inline mr-2' />Guía durante todo el recorrido.</li>
+                <li><Chevron extraClass='inline mr-2' />Transporte en modernas unidades equipadas con aire acondicionado y calefacción.</li>
+            </ul>
+            <h4 class="font-semibold text-lg my-4">No incluye:</h4>
+            <ul class="text-base">    
+                <li><Chevron extraClass='inline mr-2' />Almuerzo (se realiza una parada técnica para almorzar, efectivo necesario).</li>
+                <li><Chevron extraClass='inline mr-2' />Servicios adicionales no incluidos en la tarifa (la empresa no se responsabiliza por compras o alquileres adicionales).</li>
+            </ul> 
+        </section>
+    </PackageFull>
+    <PackageFull
+        title="Tour de Villavicencio"
+        subTitle="Miércoles y sábado de 8:00 a 13:00 horas"
+        images={["/images/lugares-turisticos/bodegas.webp"]}
+    >
+        <section slot="content">
+            <p class="text-md text-left font-normal text-semiBlack dark:text-white mt-3">
+                Descubre la precordillera mendocina y captura las mejores fotos de la Quebrada de Villavicencio desde la altura.
+            </p>
+            <h4 class="font-semibold text-lg mt-2">Itinerario del Tour</h4>
+            <ul class="text-base my-4">
+                <li class="mb-2"><strong>Camino a Villavicencio:</strong> El recorrido pasa por un camino cargado de historia, utilizado por el General San Martín y su ejército en la gesta libertadora. Al llegar a la Ruta Provincial N° 52, podrás apreciar el Monumento de Canota y una imponente vista de la precordillera mendocina.</li>
+                <li class="mb-2"><strong>Puesto de Vaquerías:</strong> Conocerás este antiguo paraje de baqueanos y arrieros, donde actualmente funciona la primera seccional de Guardaparques de la Reserva Natural Villavicencio, que cuenta con guías especializados y abarca 70,000 hectáreas.</li>
+                <li class="mb-2"><strong>Los Caracoles:</strong> Continuando hacia el antiguo camino internacional, visitaremos Los Caracoles, una ruta famosa por sus numerosas curvas.</li>
+                <li class="mb-2"><strong>Quebrada de Villavicencio:</strong> Finalmente, podrás tomar las mejores fotos desde la altura de la Quebrada de Villavicencio y conocer el casco histórico del Hotel Villavicencio y sus jardines. Este tour es ideal para quienes no disponen de un día entero para explorar la montaña de Mendoza.</li>
+            </ul>
+        </section>
+        <section slot="aside">
+            <ul class="text-base">
+                <li><strong>Duración:</strong> 5 horas</li>
+                <li><strong>Apto para:</strong> Familias, menores y adultos. No requiere actividad física.</li>
+            </ul>
+            <h4 class="font-semibold text-lg my-4">Incluye:</h4>
+            <ul class="text-base">
+                <li><Chevron extraClass='inline mr-2' />Guía durante todo el recorrido.</li>
+                <li><Chevron extraClass='inline mr-2' />Transporte en modernas unidades equipadas con aire acondicionado y calefacción.</li>
+            </ul>
+            <h4 class="font-semibold text-lg my-4">No incluye:</h4>
+            <ul class="text-base">    
+                <li><Chevron extraClass='inline mr-2' />Entrada a la Reserva Villavicencio (puedes adquirir tu ticket de ingreso en el siguiente link: comprá tu ticket <a href="https://www.eventbrite.com.ar/e/ticket-vacaciones-invierno-reserva-natural-villavicencio-tickets-934406955357?aff=ebdsoporgprofile">aqui</a>)</li>
+            </ul>
+        </section>
+    </PackageFull>
+    <PackageFull
+        title="Tour del Cañón del Atuel"
+        subTitle="Jueves y domingo, de 7:30 a 21:30hs aprox."
+        images={["/images/lugares-turisticos/bodegas.webp"]}
+    >
+        <section slot="content">
+            <p class="text-md text-left font-normal text-semiBlack dark:text-white mt-3">
+                Disfrutá de los hermosos paisajes que ofrece el sur mendocino. Pasando por el Valle de Uco, podrás deleitarte con los diferentes colores y cultivos, como una antesala de la explosión de colores que ofrece el Cañón del Atuel.
+            </p>
+            <h4 class="font-semibold text-lg mt-2">Itinerario del Tour</h4>
+            <ul class="text-base my-4">
+                <li class="mb-2"><strong>Valle de Uco:</strong> A lo largo del recorrido, admirarás los diversos colores y cultivos que caracterizan esta región, preparando el escenario para la espectacular vista del Cañón del Atuel.</li>
+                <li class="mb-2"><strong>Complejo Hidroeléctrico Los Nihuiles:</strong> Realizaremos una visita a este impresionante complejo para conocer y reflexionar sobre los avances tecnológicos y su impacto en la humanidad.</li>
+                <li class="mb-2"><strong>Ciudad de San Rafael:</strong>Exploraremos el casco urbano de esta encantadora ciudad antes de retornar a la Ciudad de Mendoza.</li>
+            </ul>
+        </section>
+        <section slot="aside">
+            <ul class="text-base">
+                <li><strong>Duración:</strong> Más de 12 horas.</li>
+                <li><strong>Apto para:</strong> Familias, menores y adultos. No requiere actividad física.</li>
+                <li><strong>Punto de Encuentro:</strong> Deberán acercarse al hotel más cercano para su encuentro.</li>
+            </ul>
+            <h4 class="font-semibold text-lg my-4">Incluye:</h4>
+            <ul class="text-base">
+                <li><Chevron extraClass='inline mr-2' />Guía durante todo el recorrido.</li>
+                <li><Chevron extraClass='inline mr-2' />Transporte en modernas unidades equipadas con aire acondicionado y calefacción.</li>
+            </ul>
+        </section>
+    </PackageFull>
+</section>

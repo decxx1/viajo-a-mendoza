@@ -1,0 +1,33 @@
+---
+import Chevron from '@/icones/Chevron.astro';
+interface Props {
+    page: string;
+    title: string;
+    description: string;
+}
+
+const { page, title, description } = Astro.props
+---
+<section class="mx-auto bg-[url('/images/hero-potrerillos.jpg')] bg-no-repeat bg-cover bg-center bg-fixed bg-gray-500 dark:bg-gray-700 bg-blend-multiply py-10">
+  
+
+  <h1 class="mb-4 text-center text-4xl font-extrabold leading-none tracking-tight text-shadow-lg border-b-title w-max mx-auto pb-2 text-semiWhite md:text-5xl lg:text-6xl dark:text-white">{title}</h1>
+  <p class="mb-6 text-center text-lg font-normal text-semiWhite text-shadow-lg lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">{description}</p>
+  
+  <nav class="mx-auto w-max my-8 flex px-3 py-2 border border-white dark:border-gray-700 rounded-md" aria-label="Breadcrumb">
+    <ol class="inline-flex items-center justify-center space-x-1 md:space-x-2 rtl:space-x-reverse">
+      <li class="inline-flex items-center">
+        <a href="/" class="inline-flex items-center text-sm font-medium text-semiWhite hover:text-primary-700 dark:text-gray-400 dark:hover:text-white group">
+            <svg class="w-4 h-4 me-2.5 text-semiWhite group-hover:text-primary-700" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150" version="1.0"><defs><clipPath id="a"><path d="M18 40h115v103.344H18Zm0 0"/></clipPath></defs><path fill="currentColor" d="m143.707 54.719-23.09-16.98V17.48a5.746 5.746 0 0 0-5.75-5.746h-9.344a5.749 5.749 0 0 0-5.75 5.746v4.922L82.172 9.453c-3.82-2.816-10.074-2.816-13.895 0L6.747 54.72C2.925 57.53 2.101 62.96 4.913 66.785l1.7 2.309c2.808 3.824 8.238 4.652 12.054 1.84l49.61-36.512c3.82-2.813 10.074-2.813 13.894 0l49.605 36.512c3.82 2.812 9.246 1.98 12.055-1.84l1.703-2.309c2.809-3.824 1.985-9.254-1.828-12.066Zm0 0"/><g clip-path="url(#a)"><path fill="currentColor" d="m125.297 74.11-43.14-31.883c-3.813-2.82-10.052-2.82-13.864 0l-43.14 31.882c-3.813 2.82-6.938 6.946-6.938 9.184v46.223c0 7.504 6.433 13.59 14.375 13.59h26.344v-40.887c0-3.16 2.59-5.742 5.746-5.742h21.082c3.156 0 5.746 2.582 5.746 5.742v40.886h26.347c7.938 0 14.364-6.085 14.364-13.59V83.294c.004-2.238-3.11-6.363-6.922-9.184Zm0 0"/></g></svg>
+          Inicio
+        </a>
+      </li>
+      <li>
+        <div class="flex items-center">
+          <Chevron extraClass='block w-4 h-4 mx-1 text-primary-700 dark:text-gray-500' />
+          <p class="ms-1 text-sm font-medium text-primary-700 md:ms-2 dark:text-gray-400 ">{page}</p>
+        </div>
+      </li>
+    </ol>
+  </nav>
+</section>

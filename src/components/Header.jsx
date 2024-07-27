@@ -1,8 +1,8 @@
 import Menu from '@/components/Menu.jsx';
 import ColorModeSwitcher from '@/components/ColorModeSwitcher.jsx';
-import { useState,useEffect } from 'react';
+import { useEffect } from 'react';
 
-export default function Header(heroPage) {
+export default function Header({heroPage}) {
     useEffect(() => {
         const header = document.querySelector(".header");
         const headerContainer = document.querySelector(".header-container");

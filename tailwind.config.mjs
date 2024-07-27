@@ -32,6 +32,7 @@ export default {
 			},
 			fontFamily: {
                 montserrat: ['Montserrat Variable', 'sans-serif'],
+				poppins: ['Poppins', 'sans-serif'],
             },
 		},
 	},

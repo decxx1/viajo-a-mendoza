@@ -1,0 +1,28 @@
+---
+import '@fontsource/poppins';
+import Layout from '@/layouts/Layout.astro';
+import Header from '@/components/Header.jsx';
+import BreadCrumbs from '@/components/BreadCrumbs.astro';
+import Tours from '@/components/Packages.astro';
+import CTAWsp from '@/components/CTAWsp.astro';
+---
+<Layout
+	title="Paquetes"
+	canonical="https://viajoamendoza.com.ar/packages"
+	metaTitle=""
+	metaDescription=""
+	metaImg=""
+	preLoad=""
+>
+    <Header
+        client:load
+        heroPage={false}
+    />
+    <BreadCrumbs
+        page="Paquetes"
+        title="Paquetes turísticos"
+        description="Los mejores recorridos que podrás disfrutar en tu visita a Mendoza"
+    />
+    <Tours />
+    <CTAWsp />
+</Layout>
