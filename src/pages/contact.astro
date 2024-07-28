@@ -1,0 +1,32 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Header from '@/components/Header.jsx';
+import CTAWsp from '@/components/CTAWsp.astro';
+import BreadCrumbs from '@/components/BreadCrumbs.astro';
+import ContactForm from '@/components/ContactForm.astro';
+import {
+    siteKey,
+} from '@/hooks/env.js';
+---
+<Layout 
+	title="Contacto"
+	canonical="https://viajoamendoza.com.ar/contact"
+	metaTitle=""
+	metaDescription=""
+	metaImg=""
+	preLoad=""
+>
+	<Header
+		client:load
+		heroPage={false}
+	/>
+	<BreadCrumbs
+        page="Contacto"
+        title="Contacto"
+        description="Consulte por cualquier duda o consulta sobre el turismo en Mendoza"
+    />
+	<ContactForm />
+	<CTAWsp />
+</Layout>
+<!-- recaptcha v3 -->
+<script async src={'https://www.google.com/recaptcha/api.js?render=' + siteKey}></script>

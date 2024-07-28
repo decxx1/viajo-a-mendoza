@@ -1,0 +1,54 @@
+---
+import {
+    schedules,
+    telphoneLinkeable,
+    telphoneReadble,
+    email,
+} from '@/hooks/env.js';
+import Form from '@/components/Form.jsx';
+---
+<section class="container mx-auto">
+    <h2 class="mt-16 text-center font-bold text-3xl border-b-title sm:w-max mx-auto pb-2 dark:text-white">Complete el formulario, o contáctenos por teléfono</h2>
+    <div class="pb-8 pt-12 px-4 mx-auto max-w-screen-xl lg:px-6">
+        <div class="grid grid-cols-6 lg:gap-8 lg:grid-cols-12">
+            <div class="col-span-6 mb-8 lg:mb-0 shadow-md dark:shadow-gray-600 p-5 border-t-4 border-primary-700">
+                <Form client:idle />
+            </div>
+            <div class="col-span-6 grid gap-6 items-center shadow-md dark:shadow-gray-600 p-5 border-t-4 border-primary-700">
+                <h2 class="mb-4 text-2xl font-bold text-black dark:text-white border-b-title pb-2">Información de contacto</h2>
+                
+                <div class="min-[338px]:flex min-[338px]:flex-row">
+                    <div class="flex justify-center mr-4 items-center mb-4 w-10 h-10 bg-primary-700 rounded dark:bg-gray-800 lg:h-16 lg:w-16">
+                        <svg class="w-5 h-5 text-white lg:w-8 lg:h-8 dark:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg>
+                    </div>
+                    <div>
+                        <p class="mb-2 text-xl font-bold text-black dark:text-white">Teléfono:</p>
+                        <ul class="text-black dark:text-gray-400">
+                            <li class="hover:font-bold dark:hover:text-white"><a href={'tel:' + telphoneLinkeable}>{telphoneReadble}</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="min-[338px]:flex min-[338px]:flex-row">
+                    <div class="flex justify-center mr-4 items-center mb-4 w-10 h-10 bg-primary-700 rounded dark:bg-gray-800 lg:h-16 lg:w-16">
+                        <svg class="w-5 h-5 text-white lg:w-8 lg:h-8 dark:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg>
+                    </div>
+                    <div>
+                        <p class="mb-2 text-xl font-bold text-black dark:text-white">E-mail:</p>
+                        <ul class="text-black dark:text-gray-400">
+                            <li class="hover:font-bold dark:hover:text-white"><a href={'mailto:' + email}>{email}</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="min-[338px]:flex min-[338px]:flex-row">
+                    <div class="flex justify-center items-center mr-4 mb-4 w-10 h-10 bg-primary-700 rounded dark:bg-gray-800 lg:h-16 lg:w-16">
+                        <svg class="w-5 h-5 text-white lg:w-8 lg:h-8 dark:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M17 7h6v16H7v-4m16-8h-6M13 0v3M1 7h16M1 3h16v16H1zm4-3v3m-1 8h2m2 0h6M4 15h2m2 0h6"/></svg>
+                    </div>
+                    <div>
+                        <p class="mb-2 text-xl font-bold text-black dark:text-white">Horario de atención</p>
+                        <p class="text-black dark:text-gray-400">{schedules}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
