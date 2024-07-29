@@ -9,7 +9,11 @@ interface Props {
 	metaTitle: string;
 	metaDescription: string;
 	metaImg: string;
-	preLoad: string;
+	preLoad?: Array <{
+		as: string
+		href: string
+		type: string
+	}>;
 }
 
 const {
@@ -56,8 +60,10 @@ const {
 		<!-- preconnect para Google Recaptcha -->
 		<link rel="preconnect" href="https://www.google.com">
 		<link rel="preconnect" href="https://www.gstatic.com" crossorigin>
-		{ preLoad &&  
-			<link rel="preload" as="image" href={preLoad} type="image/webp"/>
+		{
+			preLoad?.map(({ href, as, type }) => (
+				<link rel="preload" {as} {href} {type} />
+			))
 		}
 	</head>
 	<body class="font-montserrat bg-semiWhite dark:bg-gray-900 scrollbar scrollbar-w-3 scrollbar-thumb-rounded-[0.25rem] scrollbar-track-gray-200 scrollbar-thumb-gray-400 dark:scrollbar-track-gray-900 dark:scrollbar-thumb-gray-700">

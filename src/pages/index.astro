@@ -7,14 +7,21 @@ import MostViewed from '@/components/MostViewed.astro';
 import CTA from '@/components/CTA.astro';
 import Places from '@/components/Places.astro';
 import CTAWsp from '@/components/CTAWsp.astro';
+const preloadImages = [
+	{
+		href:"/images/hero-potrerillos.jpg",
+		as: "image",
+		type: "image/jpg",
+	}
+];
 ---
 <Layout 
 	title="Viajo a Mendoza"
 	canonical="https://viajoamendoza.com.ar"
-	metaTitle=""
-	metaDescription=""
-	metaImg=""
-	preLoad=""
+	metaTitle="Viajo a Mendoza"
+	metaDescription="Descubre los principales atractivos turísticos de Mendoza, visitas a bodegas mendocinas, degustaciones, recorridos por la alta montaña, tours con guías"
+	metaImg="https://viajoamendoza.com.ar/images/hero-potrerillos.jpg"
+	preLoad={preloadImages}
 >
 	<Header
 		client:load
