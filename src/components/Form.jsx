@@ -1,5 +1,4 @@
 import { Toaster, toast } from 'sonner'
-import axios from 'axios';
 import { useState } from 'react';
 import { 
     secretKey,
@@ -16,16 +15,17 @@ export default function Form () {
     
     const handleSubmit = (event) => {
         event.preventDefault();
-        const formData = new FormData(event.target);
-        formData.append('secret_key', secretKey);
-        formData.append('addressee', email);
-        formData.append('asunto', "Contacto desde la web - de: " + formData.get('name'));
+        const fields = Object.fromEntries(new FormData(event.target))
+        
+        fields.secret_key = secretKey;
+        fields.addressee = email;
+        fields.asunto = "Contacto desde la web - de: " + fields.name;
         if(!isSending){
             setIsSending(true);
             grecaptcha.ready(function() {
                 grecaptcha.execute(siteKey, { action: 'contacto' }).then(function(getToken) {
-                    formData.append('token', getToken);
-                    sendForm(formData);
+                    fields.token = getToken;
+                    sendForm(fields);
                 });
             });
         }
@@ -33,7 +33,10 @@ export default function Form () {
     const sendForm = (fields) => {
         fetch (endPoint, {
             method: 'POST',
-            body: fields
+            body: JSON.stringify(fields),
+            headers: {
+                'Content-Type': 'application/json'
+            }
         })
         .then(response => {
             //console.log(response)
